@@ -1,3 +1,3 @@
 export const sum = (...arr: number[]) => {
-    arr.reduce((acc, el) => acc + el, 0);
+    return arr.reduce((acc, el) => acc + el, 0);
 }
