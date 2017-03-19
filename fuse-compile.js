@@ -13,4 +13,4 @@ let fuse = new FuseBox({
     ]
 });
 
-fuse.devServer(">index.jsx");
+fuse.bundle(">index.jsx");

@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "jest",
-    "dev": "node fuse.js"
+    "dev": "node fuse.js",
+    "build": "node fuse-compile.js"
   },
   "repository": {
     "type": "git",
