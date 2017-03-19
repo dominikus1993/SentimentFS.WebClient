@@ -4,7 +4,8 @@
   "description": "Client",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "node fuse.js"
   },
   "repository": {
     "type": "git",

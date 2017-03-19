@@ -399,3 +399,6 @@ __pycache__/
 # !tools/packages.config
 
 # End of https://www.gitignore.io/api/node,visualstudio,visualstudiocode,jetbrains
+
+dist/
+.fusebox/
