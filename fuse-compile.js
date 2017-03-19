@@ -1,4 +1,4 @@
-const { FuseBox, SVGPlugin, CSSPlugin, BabelPlugin } = require("fuse-box");
+const { FuseBox, SVGPlugin, CSSPlugin, BabelPlugin, TypeScriptHelpers } = require("fuse-box");
 
 
 // Create FuseBox Instance
@@ -9,8 +9,9 @@ let fuse = new FuseBox({
     plugins: [
         SVGPlugin(),
         CSSPlugin(),
-        BabelPlugin()
+        BabelPlugin(),
+        TypeScriptHelpers()
     ]
 });
 
-fuse.bundle(">index.jsx");
+fuse.bundle(">index.tsx");
