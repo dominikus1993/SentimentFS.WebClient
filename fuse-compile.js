@@ -9,7 +9,6 @@ let fuse = new FuseBox({
     plugins: [
         SVGPlugin(),
         CSSPlugin(),
-        BabelPlugin(),
         TypeScriptHelpers()
     ]
 });

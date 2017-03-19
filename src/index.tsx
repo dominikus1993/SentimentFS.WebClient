@@ -1,1 +1,2 @@
-import "./client/main"
+import {render} from "./client/main"
+render("#root")
