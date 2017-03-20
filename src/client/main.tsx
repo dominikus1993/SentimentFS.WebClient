@@ -1,3 +1,6 @@
+import { applyMiddleware, combineReducers, createStore } from "redux";
+import { Provider } from "react-redux";
+import { init } from "./glabal/state";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./components/App";

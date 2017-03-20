@@ -5,7 +5,17 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "ES6",
-    "noEmitOnError": false
+    "noEmitOnError": false,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "jest",
+      "node",
+      "react",
+      "react-dom",
+      "react-redux"
+    ]
   },
   "compileOnSave": false
 }
