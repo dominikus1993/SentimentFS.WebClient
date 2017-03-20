@@ -37,7 +37,8 @@
   "dependencies": {
     "@types/react-dom": "^0.14.23",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "tslint": "^4.5.1"
   },
   "jest": {
     "transform": {
