@@ -1,3 +1,4 @@
+import "tslib";
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import { Provider } from "react-redux";
 import { init } from "./glabal/state";
