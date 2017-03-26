@@ -7,6 +7,12 @@
     "target": "ES6",
     "noEmitOnError": false,
     "importHelpers":true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2015",
+      "es2015.generator"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],
