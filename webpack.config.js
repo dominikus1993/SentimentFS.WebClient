@@ -56,7 +56,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new UglifyJSPlugin()
+        //new UglifyJSPlugin()
     ],
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
