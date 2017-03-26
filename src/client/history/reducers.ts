@@ -1,5 +1,6 @@
 import { Actions } from "../glabal/actions";
-export function history(state: string[] = [], action: Actions) {
+import { IKeyWord } from "../glabal/models";
+export function history(state: IKeyWord[] = [], action: Actions): IKeyWord[] {
     if (action.type === "HISTORY_FULFILLED") {
         if (action.payload.isSuccess) {
             return action.payload.value;

@@ -12,6 +12,7 @@ import { InittialApplicationState } from "./glabal/constants";
 import { IApplicationState } from "./glabal/models";
 import { reducers } from "./glabal/reducers";
 import { History } from "./glabal/urls";
+import { fetchHistory } from "./history/actions";
 
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const combinedReducers = combineReducers<IApplicationState>(reducers);
