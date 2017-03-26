@@ -57,5 +57,5 @@ export interface IAnalysisScore {
 }
 
 export interface IApplicationState {
-    analysisScore: IAnalysisScore;
+     readonly analysisScore: IAnalysisScore;
 }
