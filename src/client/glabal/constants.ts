@@ -1,4 +1,4 @@
-import { IAnalysisScore, IKeyWord, ILocalization, Trend } from './models';
+import { IAnalysisScore, IApplicationState, IKeyWord, ILocalization, Trend } from "./models";
 export const InitialAnalysisScore: IAnalysisScore = {
     key: "",
     sentimentByQuantity: { Negative: 0, Neutral: 0, Positive: 0, VaryNegative: 0, VeryPositive: 0 },
@@ -12,4 +12,8 @@ export const InitialAnalysisScore: IAnalysisScore = {
         stdDev: 0,
         variance: 0,
     },
+};
+
+export const InittialApplicationState: IApplicationState = {
+    analysisScore: InitialAnalysisScore,
 };
