@@ -1,4 +1,5 @@
 import Axios from "axios";
+import "babel-polyfill";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -16,22 +17,6 @@ const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 const combinedReducers = combineReducers<IApplicationState>(reducers);
 const middleware = applyMiddleware(logger(), thunk);
 const store = createStore<IApplicationState>(combinedReducers, InittialApplicationState, composeEnhancers(middleware));
-
-store.dispatch({ type: "HISTORY_FULFILLED", payload: { data: { isSuccess: true, value: ["dupa"] } } as any });
-
-export async function historys(quantity: number) {
-    try {
-        const result = await Axios.get(History(quantity));
-        if (result.data.isSuccess) {
-            store.dispatch({ type: "HISTORY_FULFILLED", payload: result.data.value});
-        }
-    } catch (error) {
-        console.log("ELo");
-    }
-}
-
-historys(10).then(() => {});
-historys(3).then(() => {});
 
 export const render = (element) => {
     ReactDOM.render(<App message="Hello World from App" ></App>, document.querySelector(element));
