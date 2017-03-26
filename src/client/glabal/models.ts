@@ -1,3 +1,14 @@
+
+import { AxiosRequestConfig } from "Axios";
+
+export interface Response<T> {
+    readonly data: T;
+    readonly status: number;
+    readonly statusText: string;
+    readonly headers: any;
+    readonly config: AxiosRequestConfig;
+}
+
 export interface ISuccess<T> {
     readonly isSuccess: true;
     readonly value: T;
@@ -43,4 +54,8 @@ export interface IAnalysisScore {
     readonly keyWords: IKeyWord[];
     readonly localizations: ILocalization[];
     readonly statisticData: IStatisticData;
+}
+
+export interface IApplicationState {
+    analysisScore: IAnalysisScore;
 }
