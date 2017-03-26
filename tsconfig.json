@@ -6,6 +6,7 @@
     "moduleResolution": "node",
     "target": "ES6",
     "noEmitOnError": false,
+    "importHelpers":true,
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -14,7 +15,8 @@
       "node",
       "react",
       "react-dom",
-      "react-redux"
+      "react-redux",
+      "redux-devtools"
     ]
   },
   "compileOnSave": false

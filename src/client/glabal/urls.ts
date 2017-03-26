@@ -1,3 +1,3 @@
 import { BaseUrl } from "./constants";
 
-export const History = (quantity: number)  => `/api/Search/history/${quantity}`;
+export const History = (quantity: number)  => `${BaseUrl}/api/Search/history/${quantity}`;

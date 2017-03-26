@@ -1,6 +1,6 @@
 import { IAnalysisScore, IApplicationState, IKeyWord, ILocalization, Trend } from "./models";
 
-export const BaseUrl = "http://localhost:5000/";
+export const BaseUrl = "http://localhost:5000";
 
 export const InitialAnalysisScore: IAnalysisScore = {
     key: "",
