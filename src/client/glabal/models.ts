@@ -38,9 +38,9 @@ export interface IStatisticData {
 
 export interface IAnalysisScore {
     readonly key: string;
-    sentimentByQuantity: {[K in Sentiment]: number};
-    trend: Trend;
-    keyWords: IKeyWord[];
-    localizations: ILocalization[];
-    statisticData: IStatisticData;
+    readonly sentimentByQuantity: {[K in Sentiment]: number};
+    readonly trend: Trend;
+    readonly keyWords: IKeyWord[];
+    readonly localizations: ILocalization[];
+    readonly statisticData: IStatisticData;
 }
