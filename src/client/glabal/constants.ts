@@ -16,4 +16,5 @@ export const InitialAnalysisScore: IAnalysisScore = {
 
 export const InittialApplicationState: IApplicationState = {
     analysisScore: InitialAnalysisScore,
+    history: [],
 };

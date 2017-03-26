@@ -56,6 +56,9 @@ export interface IAnalysisScore {
     readonly statisticData: IStatisticData;
 }
 
+
 export interface IApplicationState {
-     readonly analysisScore: IAnalysisScore;
+    readonly analysisScore: IAnalysisScore;
+    readonly history: string[];
 }
+
