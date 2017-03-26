@@ -1,2 +1,2 @@
-import {render} from "./client/main"
-render("#root")
+import {render} from "./client/main";
+render("#root");

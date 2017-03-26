@@ -6,6 +6,7 @@ import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import * as logger from "redux-logger";
 import thunk from "redux-thunk";
 import "tslib";
+import "whatwg-fetch";
 import App from "./app/App";
 import { InittialApplicationState } from "./glabal/constants";
 import { IApplicationState } from "./glabal/models";

@@ -61,7 +61,8 @@
     "redux-logger": "^2.8.2",
     "redux-observable": "^0.14.1",
     "redux-thunk": "^2.2.0",
-    "rxjs": "^5.2.0"
+    "rxjs": "^5.2.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "jest": {
     "transform": {
