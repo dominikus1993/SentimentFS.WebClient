@@ -1,7 +1,7 @@
 
 import { AxiosRequestConfig } from "Axios";
 
-export interface Response<T> {
+export interface IResponse<T> {
     readonly data: T;
     readonly status: number;
     readonly statusText: string;
