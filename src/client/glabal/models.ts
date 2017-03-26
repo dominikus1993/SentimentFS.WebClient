@@ -1,14 +1,3 @@
-
-import { AxiosRequestConfig } from "Axios";
-
-export interface IResponse<T> {
-    readonly data: T;
-    readonly status: number;
-    readonly statusText: string;
-    readonly headers: any;
-    readonly config: AxiosRequestConfig;
-}
-
 export interface ISuccess<T> {
     readonly isSuccess: true;
     readonly value: T;
