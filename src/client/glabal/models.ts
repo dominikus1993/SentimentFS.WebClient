@@ -48,6 +48,6 @@ export interface IAnalysisScore {
 
 export interface IApplicationState {
     readonly analysisScore: IAnalysisScore;
-    readonly history: string[];
+    readonly history: IKeyWord[];
 }
 
