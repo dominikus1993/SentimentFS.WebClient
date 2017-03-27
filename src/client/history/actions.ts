@@ -13,7 +13,7 @@ export function fetchHistoryFulfilled(result: IResult<IKeyWord[]>): Actions {
 }
 
 export function fetchHistoryRejected(error?: any): Actions {
-    return { type: "HISTORY_REJECTED", payload: error };
+    return { type: "HISTORY_REJECTED", error };
 }
 
 export function fetchHistory(quantity: number ) {
