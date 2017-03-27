@@ -31,7 +31,7 @@ class AppComponent extends Component<IAppProps & IAppDispatchProps & IApplicatio
     }
 
     componentDidMount() {
-        this.props.fetchHistory(10);
+        this.props.fetchHistory(25);
     }
 
     render() {
