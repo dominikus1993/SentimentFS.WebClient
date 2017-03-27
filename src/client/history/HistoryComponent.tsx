@@ -12,7 +12,7 @@ export class History extends React.Component<IHistoryProps, IHistoryState> {
         const keyWords = this.props.keyWords.map((keyWord) => (
             <li key={keyWord.key}>
                 <span>{keyWord.quantity}</span>
-                <p>{keyWord.key}</p>
+                {keyWord.key}
             </li>
         ));
         return (<ul className="search-history">{keyWords}</ul>);
