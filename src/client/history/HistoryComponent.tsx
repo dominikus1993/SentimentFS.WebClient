@@ -1,13 +1,13 @@
 import * as React from "react";
 import { IKeyWord } from "../glabal/models";
 
-interface IHistoryProps {
+export interface IHistoryProps {
     keyWords: IKeyWord[];
 };
 
-interface IHistoryState { };
+export interface IHistoryState { };
 
-class History extends React.Component<IHistoryProps, IHistoryState> {
+export class History extends React.Component<IHistoryProps, IHistoryState> {
     public render(): JSX.Element {
         const keyWords = this.props.keyWords.map((keyWord) => (
             <li key={keyWord.key}>

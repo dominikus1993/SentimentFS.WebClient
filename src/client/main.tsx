@@ -19,6 +19,14 @@ const combinedReducers = combineReducers<IApplicationState>(reducers);
 const middleware = applyMiddleware(logger(), thunk);
 const store = createStore<IApplicationState>(combinedReducers, InittialApplicationState, composeEnhancers(middleware));
 
+store.subscribe(() => {
+    console.log("changed", store.getState());
+});
+
 export const render = (element) => {
-    ReactDOM.render(<App message="Hello World from App" ></App>, document.querySelector(element));
+    ReactDOM.render(
+        <Provider store={store} >
+            <App />
+        </Provider>,
+        document.querySelector(element));
 };
