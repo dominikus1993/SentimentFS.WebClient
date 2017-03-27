@@ -1,18 +1,19 @@
-import { Reducers } from "../glabal/reducers";
-import { Dispatch } from "redux";
-import { history } from "../history/reducers";
 import * as React from "react";
 import { Component } from "react";
+import {connect} from "react-redux";
+import { Dispatch } from "redux";
 import { Actions } from "../glabal/actions";
 import { IApplicationState } from "../glabal/models";
+import { Reducers } from "../glabal/reducers";
 import { fetchHistory } from "../history/actions";
 import { History } from "../history/HistoryComponent";
+import { history } from "../history/reducers";
 
 export interface IAppProps { };
 export interface IAppState { };
 
 export interface IAppDispatchProps {
-    fetchHistory: (quantity: number) => Actions;
+    fetchHistory: (quantity: number) => any;
 }
 
 const mapStateToProps = (state: IApplicationState, appProps: IAppProps) => ({
@@ -22,9 +23,9 @@ const mapStateToProps = (state: IApplicationState, appProps: IAppProps) => ({
 
 const mapDispatchToProps = (dispatch: Dispatch<Reducers>) => ({
     fetchHistory: (quantity: number) => dispatch(fetchHistory(quantity)),
-})
+});
 
-class App extends Component<IApplicationState & IAppProps & IAppDispatchProps, IAppState> {
+class AppComponent extends Component<IAppProps & IAppDispatchProps & IApplicationState, IAppState> {
     constructor(props) {
         super(props);
     }
@@ -43,4 +44,4 @@ class App extends Component<IApplicationState & IAppProps & IAppDispatchProps, I
     }
 }
 
-export default App;
+export const App: React.ComponentClass<IAppProps> = connect(mapStateToProps, mapDispatchToProps)(AppComponent);
