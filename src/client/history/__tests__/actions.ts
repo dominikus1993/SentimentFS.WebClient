@@ -1,10 +1,9 @@
+import { history } from '../reducers';
+import { BaseUrl } from '../../glabal/constants';
+import * as nock from "nock";
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { fetchHistory, fetchHistoryFulfilled, fetchHistoryRejected, requestHistory } from "../actions";
-
-jest.unmock("../actions");
-jest.unmock("redux-mock-store");
-jest.unmock("redux-thunk");
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -18,6 +17,9 @@ const mockResponse = (status, statusText, response) => {
         },
     });
 };
+afterAll(() => {
+    nock.cleanAll();
+})
 
 test("requestHistory(10)", () => {
     const testSubject = requestHistory(10);
@@ -35,12 +37,14 @@ test(`fetchHistoryRejected("Fetch failed")`, () => {
 });
 
 test(`fetchHistory(1) ok`, async () => {
-    const store = mockStore();
-    window.fetch = jest.fn().mockImplementation(() => (Promise.resolve(mockResponse(200, null, `{isSuccess: true, value: [{key: "Dominik", quantity: 10}]}`))));
+    nock(BaseUrl)
+        .get("/api/Search/history/1")
+        .reply(200, { body: { isSuccess: true, value: [{ key: "Dominik", quantity: 10 }] } });
+    const store = mockStore({history: []});
 
     const result = await store.dispatch(fetchHistory(1));
     const expectedActions = store.getActions();
     expect(expectedActions.length).toBe(2);
     expect(expectedActions[0]).toMatchObject({ type: "HISTORY_REQUEST", payload: 1 });
-    expect(expectedActions[1]).toMatchObject({ type: "HISTORY_FULFILLED", payload: {isSuccess: true, value: [{key: "Dominik", quantity: 10}]} });
+    expect(expectedActions[1]).toMatchObject({ type: "HISTORY_FULFILLED", payload: { isSuccess: true, value: [{ key: "Dominik", quantity: 10 }] } });
 });
