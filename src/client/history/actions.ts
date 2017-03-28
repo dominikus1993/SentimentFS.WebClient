@@ -20,7 +20,7 @@ export function fetchHistory(quantity: number ) {
     return async (dispatch: Dispatch<Reducers>) => {
         try {
             dispatch(requestHistory(quantity));
-            const response = await fetch(History(quantity));
+            const response = await window.fetch(History(quantity));
             const result: IResult<IKeyWord[]> = await response.json();
             return dispatch(fetchHistoryFulfilled(result));
         } catch (error) {
