@@ -1,11 +1,11 @@
 import { shallow } from "enzyme";
 import * as React from "react";
 import { IKeyWord } from "../../glabal/models";
-import { History } from "../HistoryComponent";
+import { HistoryList } from "../HistoryListComponent";
 
 test("<History /> one element", () => {
     const keyWords: IKeyWord[] = [{ key: "Dominik", quantity: 10 }];
-    const component = shallow(<History keyWords={keyWords} />);
+    const component = shallow(<HistoryList keyWords={keyWords} />);
     const list = component.find(".search-history").children();
     expect(list.length).toBe(keyWords.length);
     expect(list.at(0).childAt(0).text()).toBe(keyWords[0].quantity.toString());
@@ -14,7 +14,7 @@ test("<History /> one element", () => {
 
 test("<History /> more than one element", () => {
     const keyWords: IKeyWord[] = [{ key: "Dominik", quantity: 10 }, { key: "Dominik2", quantity: 102 }, { key: "Dominik3", quantity: 103 }];
-    const component = shallow(<History keyWords={keyWords} />);
+    const component = shallow(<HistoryList keyWords={keyWords} />);
     const list = component.find(".search-history").children();
     expect(list.length).toBe(keyWords.length);
     for (let i = 0; i < keyWords.length; i++) {

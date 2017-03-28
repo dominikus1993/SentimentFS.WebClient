@@ -6,7 +6,7 @@ import { Actions } from "../glabal/actions";
 import { IApplicationState } from "../glabal/models";
 import { Reducers } from "../glabal/reducers";
 import { fetchHistory } from "../history/actions";
-import { History } from "../history/HistoryComponent";
+import { HistoryList } from "../history/HistoryListComponent";
 import { history } from "../history/reducers";
 
 export interface IAppProps { };
@@ -38,7 +38,7 @@ class MainPageComponent extends Component<IAppProps & IAppDispatchProps & IAppli
         return (
             <div>
                 No siema
-                <History keyWords={this.props.history} />
+                <HistoryList keyWords={this.props.history} />
             </div>
         );
     }
