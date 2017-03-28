@@ -23,7 +23,11 @@
       "react",
       "react-dom",
       "react-redux",
-      "redux-devtools"
+      "redux-devtools",
+      "enzyme",
+      "cheerio",
+      "react-addons-test-utils",
+      "react-test-renderer"
     ]
   },
   "compileOnSave": false
