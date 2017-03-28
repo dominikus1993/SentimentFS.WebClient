@@ -11,18 +11,13 @@
             "id": "c72bb92b-a5ea-436f-a0a0-46de7d2eb178",
             "relativeUrl": "file://./src/client/main.tsx",
             "additionalData": null
-          },
-          {
-            "id": "b2ec54a5-97a4-45b5-a4e9-537f5ac8d7a0",
-            "relativeUrl": "dependency://./Dependency View",
-            "additionalData": null
           }
         ],
         "subItems": [],
         "activeItemIndex": 0
       },
-      "lastUsed": 1490727418823,
-      "selectedTabId": "b2ec54a5-97a4-45b5-a4e9-537f5ac8d7a0"
+      "lastUsed": 1490727478259,
+      "selectedTabId": "c72bb92b-a5ea-436f-a0a0-46de7d2eb178"
     }
   ],
   "relativePathToTsconfig": "./tsconfig.json"
