@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch: Dispatch<Reducers>) => ({
     fetchHistory: (quantity: number) => dispatch(fetchHistory(quantity)),
 });
 
-class AppComponent extends Component<IAppProps & IAppDispatchProps & IApplicationState, IAppState> {
+class MainPageComponent extends Component<IAppProps & IAppDispatchProps & IApplicationState, IAppState> {
     constructor(props) {
         super(props);
     }
@@ -44,4 +44,4 @@ class AppComponent extends Component<IAppProps & IAppDispatchProps & IApplicatio
     }
 }
 
-export const App: React.ComponentClass<IAppProps> = connect(mapStateToProps, mapDispatchToProps)(AppComponent);
+export const MainPage: React.ComponentClass<IAppProps> = connect(mapStateToProps, mapDispatchToProps)(MainPageComponent);
