@@ -7,7 +7,7 @@ import * as logger from "redux-logger";
 import thunk from "redux-thunk";
 import "tslib";
 import "whatwg-fetch";
-import { MainPage } from "./MainPage/MainPage";
+import { MainPage } from "./mainPage/MainPage";
 import { InittialApplicationState } from "./glabal/constants";
 import { IApplicationState } from "./glabal/models";
 import { reducers } from "./glabal/reducers";
