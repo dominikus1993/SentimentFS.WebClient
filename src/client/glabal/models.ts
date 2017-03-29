@@ -49,10 +49,11 @@ export interface IAnalysisScore {
     readonly statisticData: IStatisticData;
 }
 
-export type AnalysisData = IAnalysisScore & ILoadable;
+export type AnalysisScore = IAnalysisScore & ILoadable;
+export type History = { keywords: IKeyWord[] } & ILoadable;
 
 export interface IApplicationState {
-    readonly analysisScore: AnalysisData;
+    readonly analysisScore: AnalysisScore;
     readonly history: IKeyWord[];
 }
 

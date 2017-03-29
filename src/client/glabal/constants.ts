@@ -1,8 +1,8 @@
-import { AnalysisData, IApplicationState, IKeyWord, ILocalization, Trend } from './models';
+import { AnalysisScore, History, IApplicationState, IKeyWord, ILocalization,  Trend } from './models';
 
 export const BaseUrl = "http://localhost:5000";
 
-export const InitialAnalysisScore: AnalysisData = {
+export const InitialAnalysisScore: AnalysisScore = {
     key: "",
     sentimentByQuantity: { Negative: 0, Neutral: 0, Positive: 0, VaryNegative: 0, VeryPositive: 0 },
     trend: Trend.Increasing,
@@ -16,6 +16,11 @@ export const InitialAnalysisScore: AnalysisData = {
         variance: 0,
     },
     isLoading: false,
+};
+
+export const InitialHistory: History = {
+    isLoading: false,
+    keywords: [],
 };
 
 export const InittialApplicationState: IApplicationState = {
