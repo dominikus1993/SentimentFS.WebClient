@@ -31,7 +31,7 @@ class MainPageComponent extends Component<IAppProps & IAppDispatchProps & IAppli
     }
 
     componentDidMount() {
-        this.props.fetchHistory(25);
+        this.props.fetchHistory(10);
     }
 
     render() {
