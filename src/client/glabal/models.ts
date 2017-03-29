@@ -12,6 +12,10 @@ export type IResult<T> = IError<T> | ISuccess<T>;
 
 export type Sentiment = "VaryNegative" | "Negative" | "Neutral" | "Positive" | "VeryPositive";
 
+export interface ILoadable {
+    isLoading: boolean;
+}
+
 export const enum Trend {
     Decreasing = -1,
     Stable = 0,
@@ -45,9 +49,10 @@ export interface IAnalysisScore {
     readonly statisticData: IStatisticData;
 }
 
+export type AnalysisData = IAnalysisScore & ILoadable;
 
 export interface IApplicationState {
-    readonly analysisScore: IAnalysisScore;
+    readonly analysisScore: AnalysisData;
     readonly history: IKeyWord[];
 }
 
