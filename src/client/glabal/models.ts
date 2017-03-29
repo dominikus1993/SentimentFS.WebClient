@@ -54,6 +54,6 @@ export type History = { keywords: IKeyWord[] } & ILoadable;
 
 export interface IApplicationState {
     readonly analysisScore: AnalysisScore;
-    readonly history: IKeyWord[];
+    readonly history: History;
 }
 

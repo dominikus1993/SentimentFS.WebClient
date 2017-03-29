@@ -38,7 +38,7 @@ class MainPageComponent extends Component<IAppProps & IAppDispatchProps & IAppli
         return (
             <div>
                 No siema
-                <HistoryList keyWords={this.props.history} />
+                <HistoryList history={this.props.history} />
             </div>
         );
     }

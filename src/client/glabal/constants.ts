@@ -25,5 +25,5 @@ export const InitialHistory: History = {
 
 export const InittialApplicationState: IApplicationState = {
     analysisScore: InitialAnalysisScore,
-    history: [],
+    history: InitialHistory,
 };
