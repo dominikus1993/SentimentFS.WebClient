@@ -20,11 +20,13 @@
   },
   "homepage": "https://github.com/SentimentalAnalysisML/SentimentalAnalysisML.WebClient#readme",
   "devDependencies": {
+    "@types/fetch-mock": "^5.8.1",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-es2016": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "css-loader": "^0.27.3",
+    "fetch-mock": "^5.9.4",
     "jest": "^19.0.2",
     "node-sass": "^4.5.0",
     "redux-devtools": "^3.3.2",

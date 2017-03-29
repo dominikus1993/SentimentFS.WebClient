@@ -1,9 +1,9 @@
-import { history } from '../reducers';
-import { BaseUrl } from '../../glabal/constants';
-import * as nock from "nock";
+import * as fetchMock from "fetch-mock";
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
+import { BaseUrl } from "../../glabal/constants";
 import { fetchHistory, fetchHistoryFulfilled, fetchHistoryRejected, requestHistory } from "../actions";
+import { history } from "../reducers";
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -17,9 +17,6 @@ const mockResponse = (status, statusText, response) => {
         },
     });
 };
-afterAll(() => {
-    nock.cleanAll();
-})
 
 test("requestHistory(10)", () => {
     const testSubject = requestHistory(10);
@@ -37,10 +34,9 @@ test(`fetchHistoryRejected("Fetch failed")`, () => {
 });
 
 test(`fetchHistory(1) ok`, async () => {
-    nock(BaseUrl)
-        .get("/api/Search/history/1")
-        .reply(200, { body: { isSuccess: true, value: [{ key: "Dominik", quantity: 10 }] } });
-    const store = mockStore({history: []});
+
+    fetchMock.get(BaseUrl + "/api/Search/history/1", { body: { isSuccess: true, value: [{ key: "Dominik", quantity: 10 }] } });
+    const store = mockStore({ history: [] });
 
     const result = await store.dispatch(fetchHistory(1));
     const expectedActions = store.getActions();
