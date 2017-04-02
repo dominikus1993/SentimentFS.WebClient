@@ -6,7 +6,7 @@
                 "name": "Debug",
                 "type": "chrome",
                 "request": "launch",
-                "webRoot": "${workspaceRoot}/public",
+                "webRoot": "${workspaceRoot}",
                 "url": "http://localhost:9000", 
                 "userDataDir": "${workspaceRoot}/.vscode/chrome",
                 "sourceMaps": true,

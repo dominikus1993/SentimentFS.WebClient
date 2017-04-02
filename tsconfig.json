@@ -6,8 +6,9 @@
     "moduleResolution": "node",
     "target": "ES6",
     "noEmitOnError": false,
-    "importHelpers":true,
+    "importHelpers": true,
     "experimentalDecorators": true,
+    "sourceMap": true,
     "lib": [
       "dom",
       "dom.iterable",
