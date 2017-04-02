@@ -10,7 +10,6 @@
                 "url": "http://localhost:9000", 
                 "userDataDir": "${workspaceRoot}/.vscode/chrome",
                 "sourceMaps": true,
-                "preLaunchTask": "development",
                 "smartStep": true,
                 "internalConsoleOptions": "openOnSessionStart",
                 "skipFiles": [
