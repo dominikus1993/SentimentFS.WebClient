@@ -1,5 +1,6 @@
+import { HistoryListLoadingMessage } from '../HistoryListLoadingMessage';
 import { shallow } from "enzyme";
-import * as React from "react";
+import * as React from 'react';
 import { History } from "../../glabal/models";
 import { HistoryList } from "../HistoryListComponent";
 
@@ -37,6 +38,5 @@ test("<History /> isLoading", () => {
     const history: History = { isLoading: true, keywords: [] };
 
     const component = shallow(<HistoryList history={history} />);
-    const text = component.find("h1").text();
-    expect(text).toBeDefined();
+    expect(component.contains(<HistoryListLoadingMessage message="History is Loading. Please wait." />)).toBeTruthy();
 });
