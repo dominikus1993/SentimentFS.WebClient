@@ -3,7 +3,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
-import * as logger from "redux-logger";
+import { logger } from "redux-logger";
 import thunk from "redux-thunk";
 import "tslib";
 import "whatwg-fetch";
@@ -16,7 +16,7 @@ import { fetchHistory } from "./history/actions";
 
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const combinedReducers = combineReducers<IApplicationState>(reducers);
-const middleware = applyMiddleware(logger(), thunk);
+const middleware = applyMiddleware(logger, thunk);
 const store = createStore<IApplicationState>(combinedReducers, InittialApplicationState, composeEnhancers(middleware));
 
 store.subscribe(() => {
