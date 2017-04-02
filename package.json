@@ -4,10 +4,11 @@
   "description": "Client",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest",
-    "dev": "node_modules/.bin/webpack-dev-server",
-    "build": "webpack",
-    "release": "webpack -p"
+    "test": "jest --no-cache --coverage",
+    "test:watch": "jest --watchAll",
+    "dev": "yarn install & node_modules/.bin/webpack-dev-server --config webpack.dev.config.js",
+    "build": "yarn install & jest --no-cache --coverage & webpack --config webpack.dev.config.js",
+    "prod": "yarn install & webpack -p --config webpack.production.config.js"
   },
   "repository": {
     "type": "git",

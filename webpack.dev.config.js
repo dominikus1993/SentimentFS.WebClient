@@ -1,17 +1,15 @@
 const path = require('path');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const babelOptions = {
-  "presets": [
-    "react",
-    [
-      "es2015",
-      {
-        "modules": false
-      }
-    ],
-    "es2016"
-  ]
+    "presets": [
+        "react", [
+            "es2015",
+            {
+                "modules": false
+            }
+        ],
+        "es2016"
+    ]
 };
 
 module.exports = {
@@ -24,8 +22,7 @@ module.exports = {
         rules: [{
             test: /\.ts(x?)$/,
             exclude: /node_modules/,
-            use: [
-                {
+            use: [{
                     loader: 'babel-loader',
                     options: babelOptions
                 },
@@ -36,12 +33,10 @@ module.exports = {
         }, {
             test: /\.js$/,
             exclude: /node_modules/,
-            use: [
-                {
-                    loader: 'babel-loader',
-                    options: babelOptions
-                }
-            ]
+            use: [{
+                loader: 'babel-loader',
+                options: babelOptions
+            }]
         }, {
             test: /\.scss$/,
             use: [{
@@ -56,9 +51,7 @@ module.exports = {
             }]
         }]
     },
-    plugins: [
-        //new UglifyJSPlugin()
-    ],
+    plugins: [],
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
     },

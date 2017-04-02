@@ -1,0 +1,24 @@
+
+{
+	"version": "0.2.0",
+	"configurations": [
+	    {
+                "name": "Debug",
+                "type": "chrome",
+                "request": "launch",
+                "webRoot": "${workspaceRoot}/public",
+                "url": "http://localhost:9000", 
+                "userDataDir": "${workspaceRoot}/.vscode/chrome",
+                "sourceMaps": true,
+                "preLaunchTask": "development",
+                "smartStep": true,
+                "internalConsoleOptions": "openOnSessionStart",
+                "skipFiles": [
+                    "node_modules/**"
+                ],
+                "sourceMapPathOverrides": {
+                    "webpack:///*": "${workspaceRoot}/*"
+                }
+            }
+	]
+}
