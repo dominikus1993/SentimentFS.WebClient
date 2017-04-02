@@ -7,12 +7,12 @@ import { logger } from "redux-logger";
 import thunk from "redux-thunk";
 import "tslib";
 import "whatwg-fetch";
-import { MainPage } from "./mainPage/MainPage";
 import { InittialApplicationState } from "./glabal/constants";
 import { IApplicationState } from "./glabal/models";
 import { reducers } from "./glabal/reducers";
 import { History } from "./glabal/urls";
 import { fetchHistory } from "./history/actions";
+import { MainPage } from "./mainPage/MainPage";
 
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const combinedReducers = combineReducers<IApplicationState>(reducers);
