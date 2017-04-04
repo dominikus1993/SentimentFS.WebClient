@@ -1,6 +1,6 @@
-import { HistoryListLoadingMessage } from '../HistoryListLoadingMessage';
 import { shallow } from "enzyme";
-import * as React from 'react';
+import CircularProgress from "material-ui/CircularProgress";
+import * as React from "react";
 import { History } from "../../glabal/models";
 import { HistoryList } from "../HistoryListComponent";
 
@@ -38,5 +38,5 @@ test("<History /> isLoading", () => {
     const history: History = { isLoading: true, keywords: [] };
 
     const component = shallow(<HistoryList history={history} />);
-    expect(component.contains(<HistoryListLoadingMessage message="History is Loading. Please wait." />)).toBeTruthy();
+    expect(component.contains(<CircularProgress></CircularProgress>)).toBeTruthy();
 });

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Component } from "react";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { Actions } from "../glabal/actions";
 import { IApplicationState } from "../glabal/models";
@@ -28,13 +28,10 @@ const mapDispatchToProps = (dispatch: Dispatch<Reducers>) => ({
 class MainPageComponent extends Component<IAppProps & IAppDispatchProps & IApplicationState, IAppState> {
     constructor(props) {
         super(props);
-    }
-
-    componentDidMount() {
         this.props.fetchHistory(10);
     }
 
-    render() {
+    public render() {
         return (
             <div>
                 No siema

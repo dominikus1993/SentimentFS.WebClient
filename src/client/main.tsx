@@ -1,4 +1,5 @@
 import "babel-polyfill";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -23,10 +24,16 @@ store.subscribe(() => {
     console.log("changed", store.getState());
 });
 
+const App = () => (
+  <MuiThemeProvider>
+    <MainPage />
+  </MuiThemeProvider>
+);
+
 export const render = (element) => {
     ReactDOM.render(
         <Provider store={store} >
-            <MainPage />
+            <App />
         </Provider>,
         document.querySelector(element));
 };
